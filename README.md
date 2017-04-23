@@ -1,14 +1,6 @@
-Use ESP NOW to monitor a remote battery powered sensor
+V2 relates to an older hardware version of GoNotify where the ATMEL processor is of type ATMEGA328P.
 
+This relates to V3 sensor apps where the ATMEL code has only one serial port. Debugging is mostly done via software serial.
 
+Code written for V2 hardware version are not that dificult to transform to V3 hardware
 
-
-GoNotify Slave		===> 	GoNotify Master						===> 	Wifi AP
-Sensor						Bridge espnow controller to MQTT			Internet connectivity
-
-
-To compile Arduino sketches with esp now code do the following:
-Quit Arduino IDE and edit this file:
-C:\Users\<username>\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\<esp8266 version>\platform.txt
-
-Search "compiler.c.elf.libs", and append "-lespnow" at the end of the line. Then you can build it by Arduino IDE.
